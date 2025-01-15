@@ -1,5 +1,6 @@
 package org.example.bookmyshow.models;
 
+import jakarta.persistence.Entity;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -11,6 +12,7 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Entity
 public class Region extends BaseModel{
     private String name;
     private List<Theatre> theatres;

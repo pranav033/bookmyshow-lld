@@ -1,5 +1,8 @@
 package org.example.bookmyshow.models;
 
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import jakarta.persistence.MappedSuperclass;
 import lombok.Getter;
 import lombok.Setter;
@@ -10,7 +13,9 @@ import java.util.Date;
 @Getter
 @Setter
 public class BaseModel {
-    private Integer id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
     private Date createdAt;
     private Date updatedAt;
 }

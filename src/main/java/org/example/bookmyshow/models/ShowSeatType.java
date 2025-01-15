@@ -1,5 +1,7 @@
 package org.example.bookmyshow.models;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,9 +11,12 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class ShowSeatType {
+@Entity
+public class ShowSeatType extends BaseModel{
 
+    @ManyToOne
     private Show show;
-    private ShowSeatType showSeatType;
+    @ManyToOne
+    private SeatType seatType;
     private int price;
 }
